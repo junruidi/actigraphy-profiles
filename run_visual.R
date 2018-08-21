@@ -14,7 +14,7 @@ getData = function(actpath = actpath, flagpath = NULL){
 }
 library(shiny)
 
-# To run without flag
+# # To run without flag
 # act = getData(actpath = actpath)$act
 # flag = getData(actpath = actpath)$flag
 
