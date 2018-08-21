@@ -7,8 +7,10 @@ You will need at least one csv file for the activity data. This data has two hav
 
 You can addtionally upload another csv file (same dimension as the previous one) for a flag data, where each entry reprents a binary flag 0/1 (sleep/wake, non-wear/wear, etc.)
 
-The R script run_visual.R provides detail example of how to run the app.
+The R script run_visual.R provides detail example of how to run the app. To study it, simply download the repo and run the run_visual.R file.
 
 Example data files are from NHANES.
+
+
 
 
