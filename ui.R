@@ -1,7 +1,4 @@
-library(shiny)
 
-#ui.R
-# Define UI for random distribution application 
 shinyUI(fluidPage(
   
   # Application title
@@ -9,11 +6,6 @@ shinyUI(fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      fileInput('file1', 'Upload Acitgraphy Data',
-                accept=c('text/csv','text/comma-separated-values,text/plain','.csv')),
-      tags$hr(),
-      fileInput('file2', 'Upload Flags Data',
-                accept=c('text/csv','text/comma-separated-values,text/plain','.csv')),
       bootstrapPage(
         div(style = "display:block",uiOutput("idchoices")),
         div(style = "display:block",uiOutput("daychoices"))

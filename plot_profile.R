@@ -2,10 +2,10 @@ if(!"timeDate" %in% installed.packages()){
   install.packages("timeDate")
 }
 
-plot.profile = function(act, wear = NULL, id, dates){
+plot_profile = function(act, flag = NULL, id, dates){
   a = subset(act, ID == id & Date %in% c(dates))
-  if(! is.null(wear)){
-    w = subset(wear, ID == id & Date %in% c(dates))
+  if(! is.null(flag)){
+    w = subset(flag, ID == id & Date %in% c(dates))
   }else{
     w = NULL
   }
