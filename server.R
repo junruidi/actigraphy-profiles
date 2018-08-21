@@ -15,15 +15,10 @@ shinyServer(function(input, output) {
     as.numeric(length(input$Dates))
   })
   
-  plotHeight <- reactive(200 * plotCount())      
+  plotHeight <- reactive(250 * plotCount())      
   
   output$plot <- renderPlot({
     if(is.null(act)){return()}
-    # if(is.null(Maindata$wear)){
-    #   wear = NULL
-    # }else{
-    #   wear = Maindata$wear
-    # }
     plot_profile(act = act , flag = flag,
                  id = input$ID, dates = input$Dates)
   })
