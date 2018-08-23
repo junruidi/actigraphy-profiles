@@ -8,7 +8,7 @@ shinyServer(function(input, output) {
   })
   output$daychoices = renderUI({
     if(is.null(act)){return()}
-    selectInput("Dates", label = "Dates", choices = act$Date,multiple = T)
+    selectInput("Dates", label = "Dates", choices = act$Date[which(act$ID == input$ID)],multiple = T)
   })
   
   plotCount <- reactive({
