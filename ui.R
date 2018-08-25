@@ -10,7 +10,7 @@ shinyUI(fluidPage(
         div(style = "display:block",uiOutput("idchoices")),
         div(style = "display:block",uiOutput("daychoices"))
       ),
-      actionButton("goplot", "PLOT"),
+      actionButton("goplot", "Plot"),
       actionButton("reset", "Clear")
     ),
     mainPanel(
