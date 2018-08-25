@@ -1,4 +1,4 @@
-shinyServer(function(input, output) {
+shinyServer(function(input, output,session) {
   
 
   
@@ -23,7 +23,16 @@ shinyServer(function(input, output) {
                  id = input$ID, dates = input$Dates)
   })
   
-  output$plot.ui <- renderUI({
-    plotOutput("plot", height = plotHeight())
+  observeEvent(input$goplot,{
+    output$plot.ui <- renderUI({
+      plotOutput("plot", height = plotHeight())
+    })
   })
+
+  observeEvent(input$reset,{
+    output$plot.ui <- NULL
+    # updateSelectInput(session, "ID")
+    # updateSelectInput(session, "Dates")
+  })
+
 })
